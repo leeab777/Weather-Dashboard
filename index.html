@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="weatherDashboard">
+        <h1>Weather Dashboard</h1>
+        <label for="city">Enter City Name:</label>
+        <input type="text" id="city" name="city" placeholder="Type a city name">
+        <button type="button" id="searchBtn">Search</button>
+        <p id="weatherMessage">Enter a city name and click Search to see the weather details</p>
+    </div>
+
+    <div id="weatherDetails">      <!--weather shown here--> 
+        <div id="loading" style="display: none;"></div>   <!--loading spinner-->
+        <p id ="errorMessage" style="display: none;"></p>   <!--error message-->
+        <div id ="weatherInfo"></div>    <!--weather info will display here-->
+
+    </div>
+
+
+    <script src="wd.js"></script>
+</body>
+</html>

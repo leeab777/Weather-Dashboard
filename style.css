@@ -1,0 +1,218 @@
+#loading {                                            /*style for loading spinner*/
+    display: inline-block;
+    border: 8px solid #f3f3f3;
+    border-top:8px solid #3498db;
+    border-radius: 50%;                         /*round shape*/
+    width: 40px;
+    height: 40px;
+    animation: spin 0.5s linear infinite;   /*spin animation*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:auto;
+}
+
+@keyframes spin {            /*keyframes for the spinning animation*/
+    0% { transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
+}
+
+#errorMessage {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+body {                             /*styles for main body*/
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('start image.jpg');     /*default image*/
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#weatherDashboard,
+#weatherDetails {
+    width: 100%;
+    max-width: 250px;
+    min-width: 180px;
+    margin-left: 2%;
+}
+
+#weatherDashboard{
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin-top: 15px;
+    max-height: 225px;
+    color: bisque;
+}
+
+#weatherDetails {       /*container for the weather dashboard*/
+   background-color: transparent;
+   padding: 10px;
+   border-radius: 10px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+   text-align: center;
+   max-height: 265px;
+   margin-top: 15px;
+   position: relative;
+   color: rgb(0, 7, 10);
+}
+
+input[type="text"] {
+    padding: 6px;
+    font-size: 12px;
+    width: 80%;
+    margin-bottom: 8px;
+    border: 2px solid;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #3498bd;
+}
+
+button {
+    padding: 6px 6px;
+    font-size: 12px;
+    background-color: #3498bd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80%;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+h1 {
+    border: none;
+    margin:2px;
+    padding: 0;
+}
+
+h2 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 18px;
+    margin: 5px 0;
+    
+}
+
+@media (max-width: 480px) {
+    input,
+    #weatherDetails,
+    #weatherDashboard {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    input[type="text"], button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 400px) {
+    input[type="text"],
+    button {
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    #weatherDashboard,
+    #weatherDetails {
+        width: 80%;
+        max-width: 70%;
+        margin-left: 2%;
+    }
+
+    h1 {
+        font-size: calc(25px + 0.5vw);
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    #weatherDashboard, #weatherDetails {
+        padding: 10px;
+    }
+
+    #loading {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    input,
+    #weatherDetails,
+    #weatherDashboard {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    input [type="text"],
+    button {
+        width: 80%;
+        font-size: 14px
+    }
+
+    h1 {
+        font-size: calc(30px);
+    }
+
+    h2 {
+        font-size: calc(25px);
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    #weatherDashboard, 
+    #weatherDetails {
+        width: 30%;
+        max-width: 70%;
+        margin-left: 2%;
+    }
+
+    #loading {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media(min-width: 769px) {
+    #weatherDashboard{
+        width: 80%;
+        max-width: 250px;
+        min-width: 180px;
+    }
+    #weatherDetails{
+        width: 80%;
+        max-width: 250px;
+        min-width: 180px;
+    }
+}
