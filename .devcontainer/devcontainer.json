@@ -1,0 +1,19 @@
+{
+    "name": "Weather Dashboard",
+    "dockerFile": "Dockerfile",
+    "appPort": [
+      8080
+    ],
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",     // ESLint extension
+          "esbenp.prettier-vscode",     // Prettier extension
+          "humao.rest-client"           // REST client to test your API requests
+        ]
+      }
+    },
+    "postCreateCommand": "npm install",
+    "forwardPorts": [8080]
+  }
+  
